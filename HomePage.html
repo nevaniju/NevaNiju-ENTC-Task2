@@ -1,12 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Booking Analytics</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #12121a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00bcd4;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: #00bcd4;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .intro {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: rgba(0,0,0,0.3);
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #00bcd4;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00acc1;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .card h2 {
+      color: #00bcd4;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #12121a;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    
-    
+  <header>
+    <div class="logo">🎬 Cinema Analytics</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Reports</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Welcome to Cinema Booking Analytics</h1>
+      <p>Empowering cinema operators with real-time insights from booking data. Optimise schedules, pricing, and marketing with ease.</p>
+      <button id="uploadBtn">Upload Booking Data</button>
+      <input type="file" id="fileInput" style="display:none" />
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h2>🎟 Peak Times Analysis</h2>
+        <p>Identify high-traffic periods by day and time to optimise showtimes.</p>
+      </div>
+      <div class="card">
+        <h2>📍 Location Performance</h2>
+        <p>Compare booking trends across cinema locations and adjust strategies accordingly.</p>
+      </div>
+      <div class="card">
+        <h2>📊 Booking Trends</h2>
+        <p>Track advance vs. last-minute ticket sales to inform marketing and staffing.</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Get started with smart cinema analytics</h2>
+      <p>Transform your raw data into valuable business insights.</p>
+      <button id="getStartedBtn">Launch Dashboard</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cinema Booking Analytics. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('uploadBtn').addEventListener('click', () => {
+      document.getElementById('fileInput').click();
+    });
+
+    document.getElementById('fileInput').addEventListener('change', (event) => {
+      const file = event.target.files[0];
+      if (file) {
+        alert(`File uploaded: ${file.name}`);
+        // Future: parse and process the file here
+      }
+    });
+
+    document.getElementById('getStartedBtn').addEventListener('click', () => {
+      alert('Redirecting to Dashboard... (functionality coming soon)');
+    });
+  </script>
 </body>
 </html>
