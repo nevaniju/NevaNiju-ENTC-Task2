@@ -1,35 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to bottom, #0d0d0d 0%, #000000 100%);
+  color: #f0f0f0;
+}
 
-    body {
-      background: linear-gradient(135deg, #1e1e2f, #2c3e50);
-      color: #fff;
-      line-height: 1.6;
-    }
+header {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #222;
+}
 
-    header {
-      background: #12121a;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
+header h1 {
+  font-size: 3rem;
+  color: #00ffe1;
+  text-shadow: 0 0 10px #00ffe1;
+}
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #00bcd4;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-    }
-
+header p {
+  font-size: 1.2rem;
+  color: #ff4aff;
+  text-shadow: 0 0 8px #ff4aff;
+}
