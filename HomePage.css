@@ -123,3 +123,23 @@ header p {
   box-shadow: 0 0 25px #00ffe1;
 }
 
+.why-section {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  color: #fff;
+  max-width: 900px;
+}
+
+.visuals-section {
+  margin: 4rem auto;
+  text-align: center;
+  color: #fffa;
+}
+
+.visuals-section img {
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px #00ffe1;
+}
+
