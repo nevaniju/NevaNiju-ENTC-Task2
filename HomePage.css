@@ -46,3 +46,13 @@ header p {
   0% { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
+
+.intro {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 900px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
