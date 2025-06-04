@@ -14,26 +14,50 @@
     <div class="intro-text">CINEMA ANALYTICS DASHBOARD</div>
   </div>
 
-  <div class="home" id="home">
-    <section class="carousel-section">
-      <h2>Now Showing</h2>
-      <div class="carousel-container">
-        <div class="carousel">
-          <div class="card"><img src="img/liloandstitch.jpeg" alt="Lilo and Stitch"><p>Lilo & Stitch</p></div>
-          <div class="card"><img src="img/missionimpossible.jpg" alt="Mission Impossible"><p>Mission Impossible</p></div>
-          <div class="card"><img src="img/peppameetsthebaby.jpg" alt="Peppa Meets the Baby"><p>Peppa Meets the Baby</p></div>
-          <div class="card"><img src="img/bringherback.jpeg" alt="Bring Her Back"><p>Bring Her Back</p></div>
-          <div class="card"><img src="img/finaldestination.webp" alt="Final Destination Bloodlines"><p>Final Destination: Bloodlines</p></div>
-          <div class="card"><img src="img/thunderbolts.jpeg" alt="Thunderbolts"><p>Thunderbolts</p></div>
-          <div class="card"><img src="img/sinners.jpg" alt="Sinners"><p>Sinners</p></div>
-          <div class="card"><img src="img/SaunkanSaunkanay2.jpg" alt="Saunkan Saunkanay 2"><p>Saunkan Saunkanay 2</p></div>
-          <div class="card"><img src="img/clowninacornfield.jpg" alt="Clown in a Cornfield"><p>Clown in a Cornfield</p></div>
-        </div>
+  <div class="main">
+    <nav class="sidebar collapsed">
+      <button class="toggle-btn">☰</button>
+      <ul>
+        <li class="active" data-page="home">Overview</li>
+        <li data-page="revenue">Revenue & Attendance</li>
+        <li data-page="genre">Genre Analytics</li>
+        <li data-page="calendar">Seasonal Trends</li>
+        <li data-page="customers">Customer Insights</li>
+        <li data-page="top">Top Performing Movies</li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <div class="home page-section visible" id="home">
+        <section class="carousel-section">
+          <h2>Now Showing</h2>
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="card"><img src="img/liloandstitch.jpeg" alt="Lilo and Stitch"><p>Lilo & Stitch</p></div>
+              <div class="card"><img src="img/missionimpossible.jpg" alt="Mission Impossible"><p>Mission Impossible</p></div>
+              <div class="card"><img src="img/peppameetsthebaby.jpg" alt="Peppa Meets the Baby"><p>Peppa Meets the Baby</p></div>
+              <div class="card"><img src="img/bringherback.jpeg" alt="Bring Her Back"><p>Bring Her Back</p></div>
+              <div class="card"><img src="img/finaldestination.webp" alt="Final Destination Bloodlines"><p>Final Destination: Bloodlines</p></div>
+              <div class="card"><img src="img/thunderbolts.jpeg" alt="Thunderbolts"><p>Thunderbolts</p></div>
+              <div class="card"><img src="img/sinners.jpg" alt="Sinners"><p>Sinners</p></div>
+              <div class="card"><img src="img/SaunkanSaunkanay2.jpg" alt="Saunkan Saunkanay 2"><p>Saunkan Saunkanay 2</p></div>
+              <div class="card"><img src="img/clowninacornfield.jpg" alt="Clown in a Cornfield"><p>Clown in a Cornfield</p></div>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+
+      <!-- Placeholder sections -->
+      <div class="page-section" id="revenue"><h2>Revenue & Attendance</h2></div>
+      <div class="page-section" id="genre"><h2>Genre Analytics</h2></div>
+      <div class="page-section" id="calendar"><h2>Seasonal Trends</h2></div>
+      <div class="page-section" id="customers"><h2>Customer Insights</h2></div>
+      <div class="page-section" id="top"><h2>Top Performing Movies</h2></div>
+    </div>
   </div>
 
   <script src="HomePage.js"></script>
 
 </body>
 </html>
+
