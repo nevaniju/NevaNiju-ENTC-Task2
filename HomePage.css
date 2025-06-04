@@ -2,8 +2,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: black;
-  overflow: hidden;
+  background-color: #141414;
+  color: white;
   font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -18,7 +18,7 @@ body, html {
 
 .intro-text {
   color: red;
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: 5px;
   opacity: 0;
   animation: fadeInZoom 2s ease-in-out forwards;
@@ -44,7 +44,6 @@ body, html {
 
 .home {
   display: none;
-  height: 100vh;
   background-color: #141414;
   color: white;
   padding: 2rem;
@@ -58,4 +57,52 @@ body, html {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+.carousel-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.carousel-container {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+  scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.card {
+  display: inline-block;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 180px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  color: white;
 }
