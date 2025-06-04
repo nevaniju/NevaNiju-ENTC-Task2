@@ -145,3 +145,63 @@ body, html {
   font-size: 1.2rem;
   color: white;
 }
+
+.quick-stats h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 1rem;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: scale(1.03);
+}
+
+.stat-card h3 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  margin: 0.3rem 0 0.6rem;
+  color: #ccc;
+}
+
+.trend {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  display: inline-block;
+}
+
+.trend.up {
+  background-color: #28a745;
+  color: white;
+}
+
+.trend.stable {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.trend.note {
+  background-color: #17a2b8;
+  color: white;
+}
