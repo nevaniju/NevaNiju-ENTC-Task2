@@ -205,3 +205,17 @@ body, html {
   background-color: #17a2b8;
   color: white;
 }
+
+.sidebar a {
+  display: block;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #333;
+}
