@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cinema Analytics Dashboard</title>
   <link rel="stylesheet" href="HomePage.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-
- 
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p0N6VtYvSnT2a8pg1ezsOiDljA4RXgZDRqBdU7Zc2l3/jvKrG1T+OtN0bdh9acMJ0EjqMH1xy5pENbhWxfHQig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="HomePage.css">
 </head>
 <body>
   <div class="intro">
@@ -16,17 +16,17 @@
 
   <div class="main">
     <nav class="sidebar collapsed">
-      <button class="toggle-btn">☰</button>
+      <button class="toggle-btn" aria-label="Toggle Sidebar"><i class="fas fa-bars"></i></button>
+      <input type="text" id="sidebarSearch" placeholder="Search..." class="search-bar" aria-label="Sidebar Search">
       <ul>
-        <li><a href="HomePage.html" class="active">Overview</a></li>
-        <li><a href="revenue.html">Revenue & Attendance</a></li>
-        <li><a href="genre.html">Genre Analytics</a></li>
-        <li><a href="calendar.html">Seasonal Trends</a></li>
-        <li><a href="customers.html">Customer Insights</a></li>
-        <li><a href="top.html">Top Performing Movies</a></li>
+        <li><a href="HomePage.html" class="active" title="Dashboard Overview"><i class="fas fa-chart-pie"></i> Overview</a></li>
+        <li><a href="revenue.html" title="View revenue and attendance breakdown"><i class="fas fa-dollar-sign"></i> Revenue & Attendance</a></li>
+        <li><a href="genre.html" title="Explore genres and trends"><i class="fas fa-film"></i> Genre Analytics</a></li>
+        <li><a href="seasonal.html" title="Check seasonal viewing patterns"><i class="fas fa-calendar-alt"></i> Seasonal Trends</a></li>
+        <li><a href="customers.html" title="Analyze customer demographics"><i class="fas fa-users"></i> Customer Insights</a></li>
+        <li><a href="top.html" title="See top performing movies"><i class="fas fa-star"></i> Top Performing Movies</a></li>
       </ul>
     </nav>
-    
 
     <div class="content">
       <div class="home page-section visible" id="home">
@@ -46,80 +46,60 @@
             </div>
           </div>
         </section>
+
+        <div class="movie-divider"></div>
+
+        <section class="quick-stats">
+          <h2>Quick Stats</h2>
+          <div class="stats-grid">
+            <div class="stat-card" title="Tracks how many people attended today">
+              <h3>2,548</h3>
+              <p>Today's Attendance</p>
+              <span class="trend up">+5.6%</span>
+            </div>
+            <div class="stat-card" title="Most watched genre this week">
+              <h3>Action</h3>
+              <p>Top Genre (This Week)</p>
+              <span class="trend up">+18% from last week</span>
+            </div>
+            <div class="stat-card" title="Total box office revenue for the month">
+              <h3>$182,400</h3>
+              <p>Total Revenue (This Month)</p>
+              <span class="trend stable">↔ Strong growth</span>
+            </div>
+            <div class="stat-card" title="When most people go to the cinema">
+              <h3>Saturday 8PM</h3>
+              <p>Peak Viewing Time</p>
+              <span class="trend note">Plan promotions!</span>
+            </div>
+            <div class="stat-card" title="Most engaging movie based on completion rate">
+              <h3>Bloodlines</h3>
+              <p>Highest Retention</p>
+              <span class="trend up">89% watched till end</span>
+            </div>
+          </div>
+        </section>
+
+        <div class="movie-divider"></div>
+
+        <section class="spotlight">
+          <h2>Spotlight of the Week</h2>
+          <div class="spotlight-container">
+            <img src="img/sinners.jpg" alt="Sinners">
+            <div class="spotlight-info">
+              <h3>Sinners</h3>
+              <p><strong>Director:</strong> Ryan Coogler</p>
+              <p><strong>Box Office:</strong> $350M Worldwide</p>
+              <p><strong>Main Cast:</strong> Michael B. Jordan, Hailee Steinfeld, Miles Caton, Wunmi Mosaku</p>
+              <p>A haunting tale of guilt and redemption in a post-apocalyptic setting. Follow a group of outcasts facing their darkest secrets.</p>
+              <a href="https://www.youtube.com/watch?v=bKGxHflevuk" target="_blank" class="trailer-btn">▶ View Trailer</a>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <section class="quick-stats">
-        <h2>Quick Stats</h2>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <h3>2,548</h3>
-            <p>Today's Attendance</p>
-            <span class="trend up">+5.6%</span>
-          </div>
-          <div class="stat-card">
-            <h3>Action</h3>
-            <p>Top Genre (This Week)</p>
-            <span class="trend up">+18% from last week</span>
-          </div>
-          <div class="stat-card">
-            <h3>$182,400</h3>
-            <p>Total Revenue (This Month)</p>
-            <span class="trend stable">↔ Strong growth</span>
-          </div>
-          <div class="stat-card">
-            <h3>Saturday 8PM</h3>
-            <p>Peak Viewing Time</p>
-            <span class="trend note">Plan promotions!</span>
-          </div>
-          <div class="stat-card">
-            <h3>Bloodlines</h3>
-            <p>Highest Retention</p>
-            <span class="trend up">89% watched till end</span>
-          </div>
-        </div>
-      </section>
-    </div>
-
-      <!-- WHY TF WONT THIS WORK 
-
-    <section class="spotlight">
-      <h2>Spotlight of the Week</h2>
-      <div class="spotlight-container">
-        <img src="https://i.imgur.com/d4JLkWJ.jpg" alt="Sinners">
-        <div class="spotlight-info">
-          <h3>Sinners</h3>
-          <p><strong>Director:</strong> Ryan Coogler</p>
-          <p><strong>Box Office:</strong> $350M Worldwide</p>
-          <p><strong>Main Cast:</strong> Michael B.Jordon, Hailee Steinfield, Miles Caton, Wunmi Mosaku</p>
-          <p>A haunting tale of guilt and redemption in a post-apocalyptic setting. Follow a group of outcasts facing their darkest secrets.</p>
-          <a href="https://youtube.com" target="_blank" class="trailer-btn">▶ View Trailer</a>
-        </div>
-      </div>
-    </section>
-    
-    <section class="coming-soon">
-      <h2>Coming Soon</h2>
-      <div class="carousel coming-carousel">
-          <div class="card"><img src="img/karatekid.jpg" alt="Karate Kid"><p>Karate Kid</p></div>
-          <div class="card"><img src="img/thuglife.jpg" alt="Thug Life"><p>Thug Life</p></div>
-          <div class="card"><img src="img/m3gan.jpg" alt="M3GAN 2.0"><p>M3GAN 2.0</p></div>
-          <div class="card"><img src="img/smurf.jpg" alt="Smurfs"><p>Smurfs</p></div>
-          <div class="card"><img src="img/superman.webp" alt="Superman"><p>Superman</p></div>
-          <div class="card"><img src="img/dhadak2.jpg" alt="Dhadak 2"><p>Dhadak 2</p></div>
-          <div class="card"><img src="img/thebadguys2.jpg" alt="The Bad Guys 2"><p>The Bad Guys 2</p></div>
-          <div class="card"><img src="img/theblackphone.webp" alt="The Black Phone 2"><p>The Black Phone 2</p></div>
-        </div>
-    </section>
-    -->
-          
     </div>
   </div>
 
   <script src="HomePage.js"></script>
-
 </body>
 </html>
-
-
-
-
