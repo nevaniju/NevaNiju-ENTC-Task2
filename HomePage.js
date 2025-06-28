@@ -1,6 +1,4 @@
-// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-  // Hide the intro after 4.5 seconds
   setTimeout(() => {
     document.querySelector('.intro').style.display = 'none';
     document.getElementById('home').classList.add('visible');
@@ -11,5 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   toggleBtn.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
+  });
+
+  document.getElementById('sidebarSearch').addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.sidebar ul li').forEach(li => {
+      const text = li.textContent.toLowerCase();
+      li.style.display = text.includes(query) ? '' : 'none';
+    });
   });
 });
