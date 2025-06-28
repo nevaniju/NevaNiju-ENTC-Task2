@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seasonal Trends | Cinema Analytics</title>
+  <link rel="stylesheet" href="seasonal.css" />
+  <script defer src="seasonal.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <button class="toggle-btn">☰</button>
+      <ul>
+        <li><a href="HomePage.html">Overview</a></li>
+        <li><a href="revenue.html">Revenue & Attendance</a></li>
+        <li><a href="genre.html">Genre Analytics</a></li>
+        <li><a href="seasonal.html" class="active">Seasonal Trends</a></li>
+        <li><a href="customers.html">Customer Insights</a></li>
+        <li><a href="top.html">Top Performing Movies</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <h1 class="page-title">Seasonal Trends</h1>
+      <p class="page-description">Explore how time of year, weather, and day-of-week impact cinema attendance and revenue trends.</p>
+
+      <div class="quadrant-grid">
+        <!-- Top Left: Monthly Admissions -->
+        <section class="quadrant quadrant-wide">
+          <h2 class="viz-title">Monthly Admissions (2023–2024)</h2>
+          <div class="tableauPlaceholder" id="viz1">
+            <noscript><a href='#'><img alt='Monthly Admissions 2023-2024' src='https://public.tableau.com/static/images/mo/monthlyadmission2023-2024/Sheet1/1_rss.png' /></a></noscript>
+            <object class='tableauViz'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='monthlyadmission2023-2024/Sheet1' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https://public.tableau.com/static/images/mo/monthlyadmission2023-2024/Sheet1/1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-GB' />
+              <param name='filter' value='publish=yes' />
+            </object>
+          </div>
+          <div class="insight-box">
+            Admissions peak in <strong>December</strong> and <strong>July</strong>, aligning with school holidays. Lowest footfall occurs in April and September.
+          </div>
+        </section>
+
+        <!-- Top Right: Weather Correlation -->
+        <section class="quadrant quadrant-wide">
+          <h2 class="viz-title">Weather and Cinema Correlation</h2>
+          <div class="tableauPlaceholder" id="viz2">
+            <noscript><a href='#'><img alt='Weather And Cinema Correlation' src='https://public.tableau.com/static/images/we/weatherandcinemacorrelation/Sheet2/1_rss.png' /></a></noscript>
+            <object class='tableauViz'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='weatherandcinemacorrelation/Sheet2' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https://public.tableau.com/static/images/we/weatherandcinemacorrelation/Sheet2/1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-GB' />
+              <param name='filter' value='publish=yes' />
+            </object>
+          </div>
+          <div class="insight-box">
+            Rainy and cold days result in higher ticket sales, suggesting cinema is a go-to indoor activity during poor weather.
+          </div>
+        </section>
+
+        <!-- Full Bottom: Day of Week -->
+        <section class="quadrant full-width">
+          <h2 class="viz-title">Day of Week Patterns</h2>
+          <div class="tableauPlaceholder" id="viz3">
+            <noscript><a href='#'><img alt='Day Of Week Patterns' src='https://public.tableau.com/static/images/da/dayofweekpatterns/Sheet3/1_rss.png' /></a></noscript>
+            <object class='tableauViz'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='dayofweekpatterns/Sheet3' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https://public.tableau.com/static/images/da/dayofweekpatterns/Sheet3/1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-GB' />
+              <param name='filter' value='publish=yes' />
+            </object>
+          </div>
+          <div class="insight-box">
+            <strong>Saturdays</strong> have the highest attendance, while <strong>Tuesdays</strong> spike due to discount deals. Monday is consistently the lowest.
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+  <script src="seasonal.js"></script>
+</body>
+</html>
