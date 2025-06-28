@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Insights | Cinema Analytics</title>
+  <link rel="stylesheet" href="customers.css" />
+  <script defer src="customers.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <button class="toggle-btn">☰</button>
+      <ul>
+        <li><a href="HomePage.html">Overview</a></li>
+        <li><a href="revenue.html">Revenue & Attendance</a></li>
+        <li><a href="genre.html">Genre Analytics</a></li>
+        <li><a href="seasonal.html">Seasonal Trends</a></li>
+        <li><a href="customers.html" class="active">Customer Insights</a></li>
+        <li><a href="top.html">Top Performing Movies</a></li>
+      </ul>
+    </nav>
+
+    <!-- Content -->
+    <main class="content">
+      <h1 class="page-title">Customer Insights</h1>
+      <p class="page-description">Discover how different customer groups interact with your cinema across time, age, and occasion.</p>
+
+      <!-- Cute Stat Cards -->
+      <div class="stat-grid">
+        <div class="stat-card">1 in 3 visitors are aged 18–24</div>
+        <div class="stat-card">Peak visits occur during school holidays</div>
+        <div class="stat-card">Families prefer early afternoons</div>
+        <div class="stat-card">Late night sessions popular with Gen Z</div>
+        <div class="stat-card">Senior visits spike mid-week</div>
+        <div class="stat-card">75% of visitors buy tickets online</div>
+        <div class="stat-card">Event movies increase visits by 40%</div>
+        <div class="stat-card">Evening shows are busiest</div>
+      </div>
+
+      <!-- Tableau Visualisations -->
+      <div class="viz-section">
+        <div class="viz-row">
+          <div class="viz-wrapper">
+            <div class="viz-title">Visit Frequency by Age & Season</div>
+            <div class='tableauPlaceholder' id='viz1751034138792'>
+              <object class='tableauViz'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='visitfrequencybyageandseason/Sheet1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+              </object>
+            </div>
+            <p class="insight-box">Young adults visit more frequently during summer and winter breaks, while families peak during holidays.</p>
+          </div>
+
+          <div class="viz-wrapper">
+            <div class="viz-title">Event Impact on Attendance</div>
+            <div class='tableauPlaceholder' id='viz1751034952575'>
+              <object class='tableauViz'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='EventImpactonAttendance/Sheet4' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+              </object>
+            </div>
+            <p class="insight-box">Major premieres and holidays drive significant spikes in cinema attendance.</p>
+          </div>
+        </div>
+
+        <div class="viz-wrapper">
+          <div class="viz-title">Preferred Visit Times by Audience Type</div>
+          <div class='tableauPlaceholder' id='viz1751034509523'>
+            <object class='tableauViz'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='PreferredCinemaVisitTimesbyAudienceType/Sheet3' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+            </object>
+          </div>
+          <p class="insight-box">Families prefer afternoons, while younger audiences opt for late evening shows.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Tableau API Script -->
+  <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+</body>
+</html>

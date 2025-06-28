@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #EAE0D5;
+    color: #0A0908;
+  }
+  
+  .main {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #22333B;
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+  }
+  
+  .sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  .sidebar a.active,
+  .sidebar a:hover {
+    background-color: #5E503F;
+  }
+  
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 40px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #22333B;
+  }
+  
+  .page-description {
+    color: #5E503F;
+    margin-bottom: 30px;
+  }
+  
+  /* Cute stat cards */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  
+  .stat-card {
+    background-color: #FFF;
+    padding: 16px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    transition: transform 0.2s ease, background 0.3s ease;
+    border-left: 5px solid #C6AC8F;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-4px);
+    background-color: #F6F1EB;
+  }
+  
+  /* Graphs */
+  .viz-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .viz-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .viz-wrapper {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    padding: 20px;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .viz-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #22333B;
+    margin-bottom: 10px;
+  }
+  
+  /* Resize Tableau embeds */
+  .tableauPlaceholder object {
+    width: 100% !important;
+    height: 400px !important;
+    display: block;
+  }
+  
+  .insight-box {
+    background-color: #C6AC8F;
+    color: #0A0908;
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+  }
+  
