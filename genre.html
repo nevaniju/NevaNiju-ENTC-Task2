@@ -2,91 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Genre Analytics | Cinema Analytics</title>
   <link rel="stylesheet" href="genre.css" />
   <script defer src="genre.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="wrapper">
-    <!-- Sidebar -->
+  <div class="main">
     <nav class="sidebar">
       <button class="toggle-btn">☰</button>
       <ul>
         <li><a href="HomePage.html">Overview</a></li>
         <li><a href="revenue.html">Revenue & Attendance</a></li>
         <li><a href="genre.html" class="active">Genre Analytics</a></li>
-        <li><a href="calendar.html">Seasonal Trends</a></li>
+        <li><a href="seasonal.html">Seasonal Trends</a></li>
         <li><a href="customers.html">Customer Insights</a></li>
         <li><a href="top.html">Top Performing Movies</a></li>
       </ul>
     </nav>
 
-    <!-- Main Content -->
-    <main class="content">
+    <div class="content fade-in">
       <h1 class="page-title">Genre Analytics</h1>
-      <p class="page-description">Dive into genre trends and discover how audience preferences have changed over time.</p>
+      <p class="page-description">Explore how genre preferences evolved and dominated the cinematic landscape globally.</p>
 
-      <section class="viz-section">
-        <h2>Genre Popularity Over Time</h2>
-        <div class='tableauPlaceholder' id='viz1749180091170' style='position: relative'>
-          <noscript><a href='#'><img alt='Genre Popularity Over Time ' src='https://public.tableau.com/static/images/Ge/GenrePopularityOverTime/Sheet1/1_rss.png' style='border: none' /></a></noscript>
-          <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='GenrePopularityOverTime/Sheet1' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/Ge/GenrePopularityOverTime/Sheet1/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-GB' />
-          </object>
+      <div class="film-strip">
+        <div class="film-cell">
+          <h2 class="viz-title">Genre Popularity Over Time</h2>
+          <div class="tableauPlaceholder" id="viz1">
+            <noscript><a href='#'><img alt='Genre Popularity Over Time' src='https://public.tableau.com/static/images/Ge/GenrePopularityOverTime/Sheet1/1_rss.png' /></a></noscript>
+            <object class='tableauViz'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='GenrePopularityOverTime/Sheet1' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https://public.tableau.com/static/images/Ge/GenrePopularityOverTime/Sheet1/1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-GB' />
+            </object>
+          </div>
+          <p class="insight">Genres like Action and Adventure show a steady dominance across the decade.</p>
         </div>
-      </section>
 
-      <section class="viz-section">
-        <h2>Global Box Office By Genre</h2>
-        <div class='tableauPlaceholder' id='viz1749179231826' style='position: relative'>
-          <noscript><a href='#'><img alt='Global Box Office By Genre ' src='https://public.tableau.com/static/images/gl/globalboxofficebygenre/Sheet2/1_rss.png' style='border: none' /></a></noscript>
-          <object class='tableauViz' style='display:none;'>
-            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-            <param name='embed_code_version' value='3' />
-            <param name='site_root' value='' />
-            <param name='name' value='globalboxofficebygenre/Sheet2' />
-            <param name='tabs' value='no' />
-            <param name='toolbar' value='yes' />
-            <param name='static_image' value='https://public.tableau.com/static/images/gl/globalboxofficebygenre/Sheet2/1.png' />
-            <param name='animate_transition' value='yes' />
-            <param name='display_static_image' value='yes' />
-            <param name='display_spinner' value='yes' />
-            <param name='display_overlay' value='yes' />
-            <param name='display_count' value='yes' />
-            <param name='language' value='en-GB' />
-            <param name='filter' value='publish=yes' />
-          </object>
+        <div class="film-cell">
+          <h2 class="viz-title">Global Box Office By Genre</h2>
+          <div class="tableauPlaceholder" id="viz2">
+            <noscript><a href='#'><img alt='Global Box Office By Genre' src='https://public.tableau.com/static/images/gl/globalboxofficebygenre/Sheet2/1_rss.png' /></a></noscript>
+            <object class='tableauViz'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='globalboxofficebygenre/Sheet2' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' value='https://public.tableau.com/static/images/gl/globalboxofficebygenre/Sheet2/1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-GB' />
+            </object>
+          </div>
+          <p class="insight">Blockbusters in the Sci-Fi and Superhero genres heavily contribute to global revenue.</p>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   </div>
-
-  <!-- Load Tableau JS -->
-  <script type='text/javascript'>
-    const ids = ['viz1749180091170', 'viz1749179231826'];
-    ids.forEach(id => {
-      const divElement = document.getElementById(id);
-      const vizElement = divElement.getElementsByTagName('object')[0];
-      vizElement.style.width = '100%';
-      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-      const scriptElement = document.createElement('script');
-      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-      vizElement.parentNode.insertBefore(scriptElement, vizElement);
-    });
-  </script>
 </body>
 </html>
