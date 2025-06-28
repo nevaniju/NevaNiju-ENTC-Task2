@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top Movies | Cinema Analytics</title>
+  <link rel="stylesheet" href="top.css" />
+  <script defer src="top.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main">
+    <nav class="sidebar">
+      <button class="toggle-btn">☰</button>
+      <ul>
+        <li><a href="HomePage.html">Overview</a></li>
+        <li><a href="revenue.html">Revenue & Attendance</a></li>
+        <li><a href="genre.html">Genre Analytics</a></li>
+        <li><a href="seasonal.html">Seasonal Trends</a></li>
+        <li><a href="customers.html">Customer Insights</a></li>
+        <li><a href="top.html" class="active">Top Movies</a></li>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <h1 class="page-title">Top Movies of the Last Decade</h1>
+      <p class="page-description">Explore iconic films from around the world that defined cinematic excellence.</p>
+
+      <div class="film-strip">
+        <div class="movie-frame" data-title="Oppenheimer" data-trailer="https://www.youtube.com/embed/uYPbbksJxIg">
+          <img src="img/oppenheimer.jpg" alt="Oppenheimer">
+        </div>
+        <div class="movie-frame" data-title="The Batman (2022)" data-trailer="https://www.youtube.com/embed/mqqft2x_Aa4">
+          <img src="img/batman.jpg" alt="The Batman">
+        </div>
+        <div class="movie-frame" data-title="Spider-Man: Across the Spider-Verse" data-trailer="https://www.youtube.com/embed/cqGjhVJWtEg">
+          <img src="img/spiderman.jpg" alt="Spider-Man">
+        </div>
+        <div class="movie-frame" data-title="Interstellar" data-trailer="https://www.youtube.com/embed/zSWdZVtXT7E">
+          <img src="img/interstellar.jpg" alt="Interstellar">
+        </div>
+        <div class="movie-frame" data-title="Red Notice" data-trailer="https://www.youtube.com/embed/Pj0wz7zu3Ms">
+          <img src="img/rednotice.jpg" alt="Red Notice">
+        </div>
+        <div class="movie-frame" data-title="L2: Empuraan" data-trailer="https://www.youtube.com/embed/hlVZf-4yN50">
+          <img src="img/l2empuraan.jpg" alt="L2 Empuraan">
+        </div>
+        <div class="movie-frame" data-title="Sinners" data-trailer="https://www.youtube.com/embed/UNKNOWN">
+          <img src="img/sinners.jpg" alt="Sinners">
+        </div>
+        <div class="movie-frame" data-title="Parasite" data-trailer="https://www.youtube.com/embed/SEUXfv87Wpk">
+          <img src="img/parasite.jpeg" alt="Parasite">
+        </div>
+        <div class="movie-frame" data-title="The Godfather" data-trailer="https://www.youtube.com/embed/sY1S34973zA">
+          <img src="img/thegodfather.jpeg" alt="The Godfather">
+        </div>
+        <div class="movie-frame" data-title="Drishyam" data-trailer="https://www.youtube.com/embed/AuuX2j14NBg">
+          <img src="img/drishyam.jpg" alt="Drishyam">
+        </div>
+        <div class="movie-frame" data-title="Lord of the Rings" data-trailer="https://www.youtube.com/embed/V75dMMIW2B4">
+          <img src="img/lordoftherings.jpg" alt="Lord of the Rings">
+        </div>
+        <div class="movie-frame" data-title="Jurassic Park" data-trailer="https://www.youtube.com/embed/lc0UehYemQA">
+          <img src="img/jurrasicpark.jpeg" alt="Jurassic Park">
+        </div>
+        <div class="movie-frame" data-title="RRR" data-trailer="https://www.youtube.com/embed/f_vbAtFSEc0">
+          <img src="img/rrr.jpg" alt="RRR">
+        </div>
+      </div>
+
+      <!-- Modal for trailers -->
+      <div id="trailerModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2 id="modal-title"></h2>
+          <iframe id="trailerFrame" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
