@@ -1,142 +1,151 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Nunito', sans-serif;
-    background-color: #EAE0D5;
-    color: #22333B;
-  }
-  
-  /* Layout */
-  .main {
-    display: flex;
-    min-height: 100vh;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 250px;
-    background: #5E503F;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    padding-top: 30px;
-    transition: width 0.3s;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  
-  .sidebar ul li a {
-    display: block;
-    padding: 15px 20px;
-    color: #EAE0D5;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.2s ease;
-    border-left: 4px solid transparent;
-  }
-  
-  .sidebar ul li a.active,
-  .sidebar ul li a:hover {
-    background: #22333B;
-    color: #fff;
-    border-left: 4px solid #C6AC8F;
-  }
-  
-  .toggle-btn {
-    display: none;
-  }
-  
-  /* Content */
-  .content {
-    flex-grow: 1;
-    padding: 50px;
-    background: #F6F1E9;
-  }
-  
-  /* Titles */
-  .page-title {
-    font-size: 2.5rem;
-    color: #5E503F;
-    margin-bottom: 10px;
-  }
-  
-  .page-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 40px;
-    max-width: 800px;
-  }
-  
-  /* Quadrant Grid */
-  .quadrant-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 40px;
-  }
-  
-  /* Quadrants */
-  .quadrant {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  .quadrant-wide {
-    grid-column: span 1;
-  }
-  
-  .full-width {
-    grid-column: 1 / -1;
-  }
-  
-  /* Titles inside Quadrants */
-  .viz-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #22333B;
-    margin-bottom: 15px;
-  }
-  
-  /* Tableau Container */
-  .tableauPlaceholder {
-    flex-grow: 1;
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    margin-bottom: 15px;
-  }
-  
-  .tableauPlaceholder object {
-    width: 100% ;
-    height: 100% ;
-  }
+:root {
+  --light: #EAE0D5;
+  --accent: #C6AC8F;
+  --medium: #5E503F;
+  --dark: #22333B;
+  --darker: #0A0908;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow: rgba(0, 0, 0, 0.1);
+}
 
-  /* Insight Box */
-  .insight-box {
-    margin-top: 15px;
-    background: #C6AC8F;
-    color: #0A0908;
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-size: 0.95rem;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #EAE0D5;
+  color: #22333B;
+}
+
+.main {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--darker);
+  width: 220px;
+  padding-top: 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  border-bottom: 1px solid var(--medium);
+}
+
+.sidebar li a {
+  display: block;
+  padding: 1rem;
+  color: var(--light);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.sidebar li a:hover,
+.sidebar li a.active {
+  background-color: var(--medium);
+  color: var(--light);
+}
+
+
+/* Content */
+.content {
+  flex-grow: 1;
+  padding: 50px;
+  background: #F6F1E9;
+}
+
+/* Titles */
+.page-title {
+  font-size: 2.5rem;
+  color: #5E503F;
+  margin-bottom: 10px;
+}
+
+.page-description {
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+/* Grid */
+.quadrant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+/* Quadrant Styles */
+.quadrant {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.viz-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #22333B;
+  margin-bottom: 15px;
+}
+
+.tableauPlaceholder {
+  width: 100%;
+  height: 480px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.tableauViz {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  border: none;
+}
+
+/* Stat Cards in Insight Box */
+.insight-box {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.stat-card {
+  background-color: #C6AC8F;
+  color: #0A0908;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  background-color: #b89a74;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quadrant-grid {
+    grid-template-columns: 1fr;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .quadrant-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
+}
