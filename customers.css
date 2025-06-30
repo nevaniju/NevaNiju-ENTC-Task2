@@ -18,9 +18,9 @@ body, html {
 
 .main {
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
 }
-
 
 .sidebar {
   background-color: var(--darker);
@@ -30,11 +30,13 @@ body, html {
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  z-index: 1000;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
@@ -47,7 +49,7 @@ body, html {
   color: var(--light);
   text-decoration: none;
   font-size: 1rem;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .sidebar li a:hover,
@@ -63,7 +65,7 @@ body, html {
 
 .page-title {
   font-family: 'Bebas Neue', cursive;
-  font-size: 3rem;
+  font-size: clamp(2.2rem, 5vw, 3rem);
   color: var(--medium);
   margin-bottom: 10px;
 }
@@ -84,7 +86,7 @@ body, html {
 }
 
 .stat-card {
-  background-color: #FFF;
+  background-color: #fff;
   padding: 16px;
   border-radius: 14px;
   box-shadow: 0 4px 10px var(--shadow);
@@ -93,7 +95,6 @@ body, html {
   border-left: 5px solid var(--accent);
   color: var(--dark);
 }
-
 .stat-card:hover {
   transform: translateY(-4px);
   background-color: #f4ede6;
@@ -132,12 +133,16 @@ body, html {
 }
 
 /* Tableau Embed */
+.tableauPlaceholder {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
 .tableauPlaceholder object {
   width: 100% !important;
   height: 420px !important;
   display: block;
   border-radius: 10px;
-  overflow: hidden;
 }
 
 /* Insights */
@@ -151,8 +156,8 @@ body, html {
   border-left: 4px solid var(--medium);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .main {
     flex-direction: column;
   }
@@ -165,14 +170,18 @@ body, html {
 
   .sidebar ul {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     overflow-x: auto;
   }
 
-  .sidebar li a {
+  .sidebar li {
     flex: 1;
-    text-align: center;
+  }
+
+  .sidebar li a {
     font-size: 0.95rem;
+    text-align: center;
     padding: 0.8rem;
   }
 
@@ -181,6 +190,36 @@ body, html {
   }
 
   .stat-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .page-title {
+    font-size: clamp(2rem, 6vw, 2.6rem);
+  }
+
+  .viz-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .stat-card {
+    padding: 12px;
+  }
+
+  .insight-box {
+    font-size: 0.85rem;
+  }
+
+  .viz-wrapper {
+    padding: 1rem;
+  }
+
+  .tableauPlaceholder object {
+    height: 360px !important;
   }
 }

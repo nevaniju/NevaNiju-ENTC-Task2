@@ -1,5 +1,3 @@
-/* genre.css – Unified polished design */
-
 :root {
   --light: #EAE0D5;
   --accent: #C6AC8F;
@@ -25,7 +23,7 @@ body, html {
   min-height: 100vh;
 }
 
-
+/* SIDEBAR */
 .sidebar {
   background-color: var(--darker);
   width: 220px;
@@ -39,6 +37,7 @@ body, html {
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar li {
@@ -60,7 +59,7 @@ body, html {
   color: var(--light);
 }
 
-/* Content */
+/* CONTENT */
 .content {
   flex-grow: 1;
   padding: 2rem;
@@ -80,7 +79,7 @@ body, html {
   color: var(--dark);
 }
 
-/* Visualisation Container */
+/* FILM STRIP GRID */
 .film-strip {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -88,6 +87,7 @@ body, html {
   margin-bottom: 2rem;
 }
 
+/* FILM CELLS */
 .film-cell {
   background-color: var(--accent);
   border-radius: 12px;
@@ -108,17 +108,26 @@ body, html {
   padding-left: 15px;
 }
 
+/* RESPONSIVE TABLEAU EMBED */
 .tableauPlaceholder {
+  position: relative;
   width: 100%;
-  max-width: 100%;
-  height: 500px;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(34, 51, 59, 0.3);
   margin-bottom: 1rem;
 }
 
-/* Insight Text */
+.tableauPlaceholder object {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* INSIGHT TEXT */
 .insight {
   background: #FFF;
   padding: 0.8rem 1rem;
@@ -129,7 +138,7 @@ body, html {
   font-style: italic;
 }
 
-/* Stat cards under graphs */
+/* STAT CARDS */
 .stat-card {
   flex: 1 1 260px;
   background: linear-gradient(145deg, var(--accent), var(--light));
@@ -138,18 +147,7 @@ body, html {
   box-shadow: 0 5px 15px var(--shadow);
   color: var(--darker);
   transition: transform 0.3s, box-shadow 0.3s;
-  margin-bottom: 1rem; 
-}
-
-
-.stat-card {
-  flex: 1 1 260px;
-  background: linear-gradient(145deg, var(--accent), var(--light));
-  padding: 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px var(--shadow);
-  color: var(--darker);
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1rem;
 }
 
 .stat-card:hover {
@@ -169,6 +167,7 @@ body, html {
   color: var(--dark);
 }
 
+/* RESPONSIVE STYLES */
 @media (max-width: 768px) {
   .main {
     flex-direction: column;
@@ -176,17 +175,32 @@ body, html {
 
   .sidebar {
     width: 100%;
-    display: flex;
+    height: auto;
+    position: relative;
     overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--medium);
   }
 
   .sidebar ul {
     display: flex;
-    gap: 1rem;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 
-  .stat-cards {
-    justify-content: center;
+  .sidebar li {
+    flex: none;
+  }
+
+  .sidebar li a {
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    width: 150px;
+    font-size: 0.95rem;
+  }
+
+  .film-strip {
+    grid-template-columns: 1fr;
   }
 }
