@@ -110,7 +110,6 @@ h2, h3, .intro-text {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Carousel */
 .carousel-section h2,
 .quick-stats h2,
 .spotlight h2 {
@@ -157,7 +156,6 @@ h2, h3, .intro-text {
   color: var(--medium);
 }
 
-/* Quick Stats */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -194,7 +192,6 @@ h2, h3, .intro-text {
 .trend.stable { background-color: #ffc107; color: #333; }
 .trend.note { background-color: #17a2b8; color: white; }
 
-/* Spotlight */
 .spotlight {
   margin-top: 4rem;
   animation: fadeInUp 0.8s ease-in;
@@ -254,7 +251,6 @@ h2, h3, .intro-text {
   margin: 2rem 0;
 }
 
-/* Responsive Tableau */
 .tableauPlaceholder {
   width: 100%;
   max-width: 100%;
@@ -271,7 +267,6 @@ h2, h3, .intro-text {
   }
 }
 
-/* Mobile Styles */
 @media (max-width: 1024px) {
   .main {
     flex-direction: column;

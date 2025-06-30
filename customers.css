@@ -77,7 +77,6 @@ body, html {
   max-width: 800px;
 }
 
-/* Stat Cards */
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -100,7 +99,6 @@ body, html {
   background-color: #f4ede6;
 }
 
-/* Visualisation Cards */
 .viz-section {
   display: flex;
   flex-direction: column;
@@ -132,7 +130,6 @@ body, html {
   padding-left: 10px;
 }
 
-/* Tableau Embed */
 .tableauPlaceholder {
   width: 100%;
   max-width: 100%;
@@ -145,7 +142,6 @@ body, html {
   border-radius: 10px;
 }
 
-/* Insights */
 .insight-box {
   background-color: var(--accent);
   color: var(--darker);
@@ -156,7 +152,6 @@ body, html {
   border-left: 4px solid var(--medium);
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
   .main {
     flex-direction: column;

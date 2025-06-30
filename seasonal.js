@@ -1,4 +1,3 @@
-// Resize Tableau graphs nicely on load
 window.addEventListener('load', () => {
   const placeholders = document.querySelectorAll('.tableauPlaceholder');
   placeholders.forEach(placeholder => {

@@ -1,4 +1,3 @@
-// genre.js – Handles Tableau script loading
 document.addEventListener('DOMContentLoaded', () => {
   const vizIDs = ['viz1', 'viz2'];
 
