@@ -1,4 +1,3 @@
-
 :root {
   --light: #EAE0D5;
   --accent: #C6AC8F;
@@ -35,8 +34,8 @@ h2, h3, .intro-text {
 
 .intro-text {
   color: var(--accent);
-  font-size: 7rem;
-  letter-spacing: 5px;
+  font-size: clamp(2rem, 6vw, 7rem);
+  letter-spacing: clamp(1px, 0.5vw, 5px);
   opacity: 0;
   animation: fadeInZoom 2s ease-in-out forwards;
 }
@@ -52,70 +51,42 @@ h2, h3, .intro-text {
 
 .main {
   display: flex;
+  flex-direction: row;
   min-height: 100vh;
 }
 
 .sidebar {
   background-color: var(--darker);
   width: 220px;
-  padding-top: 1rem;
+  padding-top: 2rem;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  z-index: 100;
+  z-index: 10;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
-  transition: opacity 0.3s;
 }
 
-.sidebar ul li {
-  width: 100%;
+.sidebar li {
+  border-bottom: 1px solid var(--medium);
 }
 
 .sidebar li a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: block;
   padding: 1rem;
   color: var(--light);
   text-decoration: none;
-  font-size: .5rem;
-  border-bottom: 1px solid var(--medium);
-  white-space: nowrap;
-}
-
-.sidebar li a i {
-  min-width: 20px;
-  text-align: center;
+  font-size: 1rem;
+  transition: background 0.3s;
 }
 
 .sidebar li a:hover,
 .sidebar li a.active {
   background-color: var(--medium);
-  color: var(--light);
-}
-
-.toggle-btn {
-  background: none;
-  border: none;
-  color: var(--light);
-  font-size: 1.5rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-.search-bar {
-  width: calc(100% - 2rem);
-  margin: 0 1rem 1rem;
-  padding: 0.5rem;
-  border-radius: 5px;
-  background-color: var(--dark);
-  border: none;
   color: var(--light);
 }
 
@@ -139,6 +110,7 @@ h2, h3, .intro-text {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Carousel */
 .carousel-section h2,
 .quick-stats h2,
 .spotlight h2 {
@@ -147,15 +119,12 @@ h2, h3, .intro-text {
 }
 
 .carousel-container {
-  overflow-x: scroll;
+  overflow-x: auto;
   white-space: nowrap;
   padding-bottom: 1rem;
   scrollbar-width: none;
 }
-
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
+.carousel-container::-webkit-scrollbar { display: none; }
 
 .carousel {
   display: inline-flex;
@@ -172,18 +141,15 @@ h2, h3, .intro-text {
   transition: transform 0.3s, box-shadow 0.3s;
   color: var(--darker);
 }
-
 .card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px var(--shadow);
 }
-
 .card img {
   width: 100%;
   height: 270px;
   object-fit: cover;
 }
-
 .card p {
   padding: 0.5rem;
   text-align: center;
@@ -191,69 +157,48 @@ h2, h3, .intro-text {
   color: var(--medium);
 }
 
+/* Quick Stats */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
-
 .stat-card {
   background: linear-gradient(145deg, var(--accent), var(--light));
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   color: var(--darker);
-  position: relative;
-  overflow: hidden;
   transition: all 0.3s ease;
 }
-
 .stat-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 25px rgba(0,0,0,0.2);
 }
-
 .stat-card h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
   margin: 0;
-  color: var(--dark);
 }
-
 .stat-card p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 1.2vw, 1.1rem);
   margin: 0.5rem 0 1rem;
-  color: #444;
 }
-
 .trend {
   font-size: 0.9rem;
   padding: 0.3rem 0.6rem;
   border-radius: 5px;
   background-color: var(--dark);
   color: var(--light);
-  display: inline-block;
 }
+.trend.up { background-color: #28a745; color: white; }
+.trend.stable { background-color: #ffc107; color: #333; }
+.trend.note { background-color: #17a2b8; color: white; }
 
-.trend.up {
-  background-color: #28a745;
-  color: white;
-}
-
-.trend.stable {
-  background-color: #ffc107;
-  color: #333;
-}
-
-.trend.note {
-  background-color: #17a2b8;
-  color: white;
-}
-
+/* Spotlight */
 .spotlight {
   margin-top: 4rem;
   animation: fadeInUp 0.8s ease-in;
 }
-
 .spotlight-container {
   display: flex;
   flex-wrap: wrap;
@@ -264,31 +209,24 @@ h2, h3, .intro-text {
   overflow: hidden;
   box-shadow: 0 4px 12px var(--shadow);
 }
-
 .spotlight-container img {
   width: 100%;
   max-width: 300px;
   object-fit: cover;
 }
-
 .spotlight-info {
   padding: 1.5rem;
   flex: 1;
   background: rgba(234, 224, 213, 0.85);
-  color: var(--darker);
 }
-
 .spotlight-info h3 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
   color: var(--medium);
 }
-
 .spotlight-info p {
   margin: 0.3rem 0;
-  color: var(--darker);
 }
-
 .trailer-btn {
   display: inline-block;
   margin-top: 1rem;
@@ -299,21 +237,14 @@ h2, h3, .intro-text {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-
 .trailer-btn:hover {
   background-color: var(--medium);
   color: var(--light);
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .movie-divider {
@@ -323,35 +254,65 @@ h2, h3, .intro-text {
   margin: 2rem 0;
 }
 
+/* Responsive Tableau */
+.tableauPlaceholder {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+.tableauPlaceholder object {
+  width: 100%;
+  height: 600px;
+}
 @media (max-width: 768px) {
+  .tableauPlaceholder object {
+    height: 400px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
   .main {
     flex-direction: column;
   }
 
   .sidebar {
     width: 100%;
-    display: flex;
-    overflow-x: auto;
+    height: auto;
+    position: relative;
   }
 
   .sidebar ul {
     display: flex;
-    gap: 1rem;
-    justify-content: space-around;
-    opacity: 1 !important;
-  }
-
-  .sidebar ul li {
-    border-bottom: none;
-    flex: 1;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .spotlight-container {
     flex-direction: column;
   }
 
-  .carousel-container {
-    padding-left: 0;
+  .carousel {
+    gap: 0.5rem;
+  }
+
+  .card {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar li a {
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .stat-card {
+    padding: 1rem;
+  }
+
+  .spotlight-info h3 {
+    font-size: 1.5rem;
   }
 }

@@ -6,8 +6,7 @@
   <title>Cinema Analytics Dashboard</title>
   <link rel="stylesheet" href="HomePage.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p0N6VtYvSnT2a8pg1ezsOiDljA4RXgZDRqBdU7Zc2l3/jvKrG1T+OtN0bdh9acMJ0EjqMH1xy5pENbhWxfHQig==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="HomePage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <div class="intro">
@@ -15,21 +14,20 @@
   </div>
 
   <div class="main">
-    <nav class="sidebar collapsed">
-      <button class="toggle-btn" aria-label="Toggle Sidebar"><i class="fas fa-bars"></i></button>
-      <input type="text" id="sidebarSearch" placeholder="Search..." class="search-bar" aria-label="Sidebar Search">
+    <nav class="sidebar">
       <ul>
         <li><a href="HomePage.html" class="active" title="Dashboard Overview"><i class="fas fa-chart-pie"></i> Overview</a></li>
         <li><a href="revenue.html" title="View revenue and attendance breakdown"><i class="fas fa-dollar-sign"></i> Revenue & Attendance</a></li>
         <li><a href="genre.html" title="Explore genres and trends"><i class="fas fa-film"></i> Genre Analytics</a></li>
         <li><a href="seasonal.html" title="Check seasonal viewing patterns"><i class="fas fa-calendar-alt"></i> Seasonal Trends</a></li>
         <li><a href="customers.html" title="Analyze customer demographics"><i class="fas fa-users"></i> Customer Insights</a></li>
-        <li><a href="top.html" title="See top performing movies"><i class="fas fa-star"></i> Top Performing Movies</a></li>
+        <li><a href="top.html" title="See top performing movies"><i class="fas fa-star"></i> Top Movies</a></li>
       </ul>
     </nav>
 
     <div class="content">
       <div class="home page-section visible" id="home">
+        <!-- Carousel Section -->
         <section class="carousel-section">
           <h2>Now Showing</h2>
           <div class="carousel-container">
@@ -38,7 +36,7 @@
               <div class="card"><img src="img/missionimpossible.jpg" alt="Mission Impossible"><p>Mission Impossible</p></div>
               <div class="card"><img src="img/peppameetsthebaby.jpg" alt="Peppa Meets the Baby"><p>Peppa Meets the Baby</p></div>
               <div class="card"><img src="img/bringherback.jpeg" alt="Bring Her Back"><p>Bring Her Back</p></div>
-              <div class="card"><img src="img/finaldestination.webp" alt="Final Destination Bloodlines"><p>Final Destination: Bloodlines</p></div>
+              <div class="card"><img src="img/finaldestination.webp" alt="Final Destination Bloodlines"><p>Final Destination</p></div>
               <div class="card"><img src="img/thunderbolts.jpeg" alt="Thunderbolts"><p>Thunderbolts</p></div>
               <div class="card"><img src="img/sinners.jpg" alt="Sinners"><p>Sinners</p></div>
               <div class="card"><img src="img/SaunkanSaunkanay2.jpg" alt="Saunkan Saunkanay 2"><p>Saunkan Saunkanay 2</p></div>
@@ -49,30 +47,31 @@
 
         <div class="movie-divider"></div>
 
+        <!-- Quick Stats Section -->
         <section class="quick-stats">
           <h2>Quick Stats</h2>
           <div class="stats-grid">
-            <div class="stat-card" title="Tracks how many people attended today">
+            <div class="stat-card">
               <h3>2,548</h3>
               <p>Today's Attendance</p>
               <span class="trend up">+5.6%</span>
             </div>
-            <div class="stat-card" title="Most watched genre this week">
+            <div class="stat-card">
               <h3>Action</h3>
               <p>Top Genre (This Week)</p>
               <span class="trend up">+18% from last week</span>
             </div>
-            <div class="stat-card" title="Total box office revenue for the month">
+            <div class="stat-card">
               <h3>$182,400</h3>
               <p>Total Revenue (This Month)</p>
               <span class="trend stable">↔ Strong growth</span>
             </div>
-            <div class="stat-card" title="When most people go to the cinema">
+            <div class="stat-card">
               <h3>Saturday 8PM</h3>
               <p>Peak Viewing Time</p>
               <span class="trend note">Plan promotions!</span>
             </div>
-            <div class="stat-card" title="Most engaging movie based on completion rate">
+            <div class="stat-card">
               <h3>Bloodlines</h3>
               <p>Highest Retention</p>
               <span class="trend up">89% watched till end</span>
@@ -82,6 +81,7 @@
 
         <div class="movie-divider"></div>
 
+        <!-- Spotlight Section -->
         <section class="spotlight">
           <h2>Spotlight of the Week</h2>
           <div class="spotlight-container">
